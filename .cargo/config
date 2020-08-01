@@ -1,0 +1,10 @@
+[build]
+target = "riscv64gc-unknown-none-elf"
+
+[target.riscv64gc-unknown-none-elf]
+#runner = "qemu-system-riscv64 -s -S -machine virt -cpu rv64 -d guest_errors,unimp -smp 4 -m 128M -serial mon:stdio -bios none -device virtio-rng-device -device virtio-gpu-device -device virtio-net-device -device virtio-tablet-device -device virtio-keyboard-device -kernel "
+runner = "qemu-system-riscv64 -s -S -machine virt -cpu rv64 -smp 4 -m 128M -bios none -kernel "
+rustflags = ['-Clink-arg=-Tsrc/arch/riscv/virt64.ld']
+
+[unstable]
+build-std = ["core", "compiler_builtins"]
