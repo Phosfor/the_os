@@ -1,7 +1,7 @@
 TheOS
 =====
 
-TheOS (read "The OS" or "Theos", greak for god) is a toy OS/kernel written in Rust.
+TheOS (read "The OS" or "Theos", greek for god) is a toy OS/kernel written in Rust.
 Currently only the RISC-V architecture is supported.
 The design is based on micro-kernel principles, i.e. only keep in the kernel, what cannot (efficiently) be implemented in user-space.
 
